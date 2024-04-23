@@ -12,6 +12,7 @@ async function bootstrap() {
     AppModule,
     new FastifyAdapter(),
   );
+  app.enableCors();
   await app.register(fastifyHelmet);
 
   const config = new DocumentBuilder()
