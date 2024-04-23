@@ -22,17 +22,21 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+## Descripción
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-## Installation
+## Requisito Previo
+Este arquetipo cuenta con una conexion TypeOrm a PostgreSQL, es necesario crear una Base de datos en ambiente local y reemplazar los valores de conexion en el archivo de variables de entorno.
+Si se desea instalar otro proveedor de BD, consultar https://typeorm.io/
 
-```bash
+## Instalación
+
+```bash 
 $ npm install
 ```
 
-## Running the app
+## Ejecución de la Aplicación
 
 ```bash
 # development
@@ -58,15 +62,17 @@ $ npm run tests:e2e
 $ npm run tests:cov
 ```
 
+## Despliegue
+Una vez que la aplicación indique que se encuentra operativa, ingresa a http://localhost:3000/api donde encontraras la documentacion Swagger de la API Rest.
+El puerto disponible tambien es configurable en el archivo de variables de entorno, por defecto es el puerto 3000
+
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
 ## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+- Author - Juan Pablo Rodriguez
 
 ## License
 

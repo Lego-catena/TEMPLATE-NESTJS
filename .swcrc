@@ -19,5 +19,5 @@
     },
     "target": "es2022"
   },
-  "minify": false
+  "minify": true
 }
