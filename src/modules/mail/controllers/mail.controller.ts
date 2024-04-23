@@ -1,7 +1,7 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
-import { MailService } from './mail.service';
+import { Body, Controller, Post } from '@nestjs/common';
+import { MailService } from '../services/mail.service';
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
-import { CreateMailDto } from './dto/create-mail.dto';
+import { CreateMailDto } from '../dto/create-mail.dto';
 
 @ApiTags('Sending mails')
 @Controller('mail')
@@ -14,7 +14,7 @@ export class MailController {
     description:
       'Api que se encarga de enviar un email en base a una plantilla preestablecida.',
   })
-  async sendMail(@Body() createMailDto: CreateMailDto) {
+  async sendMail(@Body() createMailDto: CreateMailDto): Promise<string> {
     await this.mailService.sendEmail(createMailDto);
     return 'Email sending';
   }
@@ -25,7 +25,7 @@ export class MailController {
     description:
       'Api que se encarga de enviar un email en base a una plantilla preestablecida.',
   })
-  async sendMailAttach(@Body() createMailDto: CreateMailDto) {
+  async sendMailAttach(@Body() createMailDto: CreateMailDto): Promise<string> {
     await this.mailService.sendEmailWithAttach(createMailDto);
     return 'Email sending';
   }

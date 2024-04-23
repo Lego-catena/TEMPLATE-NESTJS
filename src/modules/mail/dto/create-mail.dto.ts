@@ -14,4 +14,11 @@ export class CreateMailDto {
     type: String
   })
   email: string;
+
+  @ApiProperty({
+    required: false,
+    description: 'Indica la plantilla de correo a utilizar',
+    type: String
+  })
+  template: string;
 }
