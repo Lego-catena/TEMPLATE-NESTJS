@@ -1,16 +1,6 @@
-import { ApiProperty } from '@nestjs/swagger';
+import { OmitType, PartialType } from '@nestjs/swagger';
+import { ListaDistribucionDto } from '@src/modules/maintainers/lista-distribucion/dto/lista-distribucion.dto';
 
-export class CreateListaDistribucionDto {
-  @ApiProperty({
-    name: 'id',
-    type: 'number',
-  })
-  id: number;
-
-  @ApiProperty({
-    name: 'name',
-    type: 'string',
-    required: true,
-  })
-  name: string;
-}
+export class CreateListaDistribucionDto extends PartialType(
+  OmitType(ListaDistribucionDto, ['id'] as const),
+) {}

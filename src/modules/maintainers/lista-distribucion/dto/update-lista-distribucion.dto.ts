@@ -1,4 +1,10 @@
-import { PartialType } from '@nestjs/swagger';
-import { CreateListaDistribucionDto } from './create-lista-distribucion.dto';
+import { OmitType, PartialType } from '@nestjs/swagger';
+import { ListaDistribucionDto } from '@src/modules/maintainers/lista-distribucion/dto/lista-distribucion.dto';
 
-export class UpdateListaDistribucionDto extends PartialType(CreateListaDistribucionDto) {}
+/**
+ * DTO (Data Transfer Object) utilizado para actualizar una lista de distribución.
+ * Este DTO es una versión parcial de ListaDistribucionDto, excluyendo el campo 'id'.
+ */
+export class UpdateListaDistribucionDto extends PartialType(
+  OmitType(ListaDistribucionDto, ['id'] as const),
+) {}
