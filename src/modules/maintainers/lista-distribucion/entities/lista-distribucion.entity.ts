@@ -1,6 +1,6 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity({ name: 'task_config' })
+@Entity({ name: 'lista_distribucion' })
 export class ListaDistribucion {
 
   @PrimaryGeneratedColumn()

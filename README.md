@@ -30,6 +30,15 @@
 Este arquetipo cuenta con una conexion TypeOrm a PostgreSQL, es necesario crear una Base de datos en ambiente local y reemplazar los valores de conexion en el archivo de variables de entorno.
 Si se desea instalar otro proveedor de BD, consultar https://typeorm.io/
 
+### Instancia de BD
+Cuenta con un docker-compose el cual tiene una BD postgres y configurada en el puerto `5433`, inicialmente crea una base de datos con el nombre de `nestjs` y las credenciales por defecto son user: `postgres` pass: `postgres`.
+
+Para iniciar el contenedor, es necesario tener instalado docker en tu ambiente local, y ejecutar el comando siguiente:
+```bash 
+$ docker-compose up
+```
+Esto disponibilizara la instancia de BD configurada en el archivo [docker-compose.yml](docker-compose.yml)
+
 ## Instalación
 
 ```bash 
